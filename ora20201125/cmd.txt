@@ -1,0 +1,12 @@
+--初始化和创建表空间用户名时
+--如果在服务器本地运行操作
+sqlplus sys/oracle as sysdba
+
+--如果在其他客户端运行操作
+sqlplus sys/oracle@orcl as sysdba
+
+@oracle_init.sql
+@create_tablespace.sql
+--
+imp upsys/upsys_aerothinker@orcl 
+以后步骤按提示走，忽略错误选项为yes，其他为缺省
